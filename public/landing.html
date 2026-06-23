@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── Primary SEO ─────────────────────────────────────────────────── -->
+  <title>PrintOS — Print Shop Management Software | Orders, Production & AI Insights</title>
+  <meta name="description" content="PrintOS is the complete print shop management system for offset, digital, UV and screen printing businesses. Manage orders, production, payroll, inventory and customers — with AI-powered insights, WhatsApp integration and a customer portal. Trusted globally." />
+  <meta name="keywords" content="print shop management software, printing press software, print ERP, offset printing software, digital print management, print shop POS, print business software, printing industry software, production tracking, job costing software, print estimation software" />
+  <meta name="author" content="PrintOS" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://printos.app/" />
+
+  <!-- ── Open Graph ──────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://printos.app/" />
+  <meta property="og:title"       content="PrintOS — The Complete Print Shop Management System" />
+  <meta property="og:description" content="Run your entire printing business from one dashboard. Orders, production, payroll, inventory, AI insights and WhatsApp — all connected." />
+  <meta property="og:image"       content="https://printos.app/og-image.png" />
+
+  <!-- ── Twitter Card ────────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="PrintOS — Print Shop Management Software" />
+  <meta name="twitter:description" content="Manage orders, production, payroll, inventory and customers with AI-powered insights." />
+  <meta name="twitter:image"       content="https://printos.app/og-image.png" />
+
+  <!-- ── Schema.org Structured Data ─────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PrintOS",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Complete print shop management software for offset, digital, UV and screen printing businesses.",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": "0",
+      "description": "Contact for pricing"
+    },
+    "featureList": [
+      "Order Management",
+      "Production Kanban Board",
+      "Smart Quotation Engine",
+      "AI Business Insights",
+      "Customer Portal",
+      "WhatsApp Integration",
+      "Inventory Management",
+      "HR and Payroll",
+      "Multi-Branch Support",
+      "Print Costing Calculator"
+    ]
+  }
+  </script>
+
+  <!-- ── Fonts ───────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:     #0a0a0b;
+      --ink-2:   #2d2d30;
+      --ink-3:   #6e6b78;
+      --ink-4:   #b0adb8;
+      --paper:   #fafaf8;
+      --paper-2: #f2f0ec;
+      --paper-3: #e8e5df;
+      --accent:  #ff4f1a;
+      --accent-d:#d93e10;
+      --success: #00c896;
+      --border:  #e4e1db;
+      --r:       16px;
+      --r-lg:    24px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .display { font-family: 'Syne', sans-serif; }
+
+    /* ── Nav ──────────────────────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5vw; height: 68px;
+      background: rgba(250,250,248,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo-icon {
+      width: 36px; height: 36px;
+      background: var(--accent); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .nav-logo-icon svg { width: 20px; height: 20px; fill: #fff; }
+    .nav-logo-text {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800; font-size: 18px; color: var(--ink);
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a {
+      font-size: 14px; font-weight: 500; color: var(--ink-3);
+      text-decoration: none; transition: color .15s;
+    }
+    .nav-links a:hover { color: var(--ink); }
+
+    .nav-cta {
+      background: var(--accent); color: #fff;
+      padding: .55rem 1.25rem; border-radius: 10px;
+      font-size: 14px; font-weight: 600;
+      text-decoration: none;
+      transition: background .15s, transform .15s;
+    }
+    .nav-cta:hover { background: var(--accent-d); transform: translateY(-1px); }
+
+    .nav-mobile-cta { display: none; }
+
+    /* ── Hero ─────────────────────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      padding: 140px 5vw 100px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255,79,26,.08) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 30% at 80% 80%,  rgba(255,79,26,.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--paper-2); border: 1px solid var(--border);
+      border-radius: 99px; padding: .35rem 1rem;
+      font-size: 12px; font-weight: 600;
+      color: var(--accent); letter-spacing: .04em; text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    /* H1 — primary page heading */
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -.02em;
+      color: var(--ink);
+      max-width: 900px;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 .accent { color: var(--accent); }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--ink-3); max-width: 600px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .hero-actions {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      justify-content: center; margin-bottom: 4rem;
+    }
+
+    .btn-primary {
+      background: var(--accent); color: #fff;
+      padding: .85rem 2rem; border-radius: 12px;
+      font-size: 15px; font-weight: 600;
+      text-decoration: none; border: none; cursor: pointer;
+      transition: background .15s, transform .15s, box-shadow .15s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-primary:hover {
+      background: var(--accent-d);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255,79,26,.25);
+    }
+
+    .btn-secondary {
+      background: transparent; color: var(--ink);
+      padding: .85rem 2rem; border-radius: 12px;
+      font-size: 15px; font-weight: 500;
+      text-decoration: none;
+      border: 1.5px solid var(--border); cursor: pointer;
+      transition: background .15s, border-color .15s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-secondary:hover {
+      background: var(--paper-2);
+      border-color: var(--paper-3);
+    }
+
+    /* Hero stats ticker */
+    .hero-stats {
+      display: flex; gap: 2.5rem; flex-wrap: wrap;
+      justify-content: center;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem; font-weight: 800; color: var(--ink);
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 12px; color: var(--ink-4);
+      margin-top: 4px; text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    .stat-div {
+      width: 1px; background: var(--border);
+      align-self: stretch; margin: 4px 0;
+    }
+
+    /* ── Section base ─────────────────────────────────────────────────── */
+    section { padding: 96px 5vw; }
+
+    .section-eyebrow {
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .12em;
+      color: var(--accent); margin-bottom: 1rem;
+    }
+
+    /* H2 — section headings */
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 800; line-height: 1.15;
+      letter-spacing: -.015em; color: var(--ink);
+      margin-bottom: 1rem;
+    }
+
+    .section-sub {
+      font-size: 1.05rem; color: var(--ink-3);
+      max-width: 560px; margin-bottom: 3.5rem;
+    }
+
+    /* ── Problems section ─────────────────────────────────────────────── */
+    #problem { background: var(--ink); }
+    #problem h2 { color: #fff; }
+    #problem .section-sub { color: rgba(255,255,255,.5); }
+    #problem .section-eyebrow { color: var(--accent); }
+
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .problem-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--r);
+      padding: 1.5rem;
+    }
+    .problem-card .ti {
+      font-size: 1.5rem; color: var(--accent);
+      display: block; margin-bottom: 1rem;
+    }
+    /* H3 — card headings */
+    .problem-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: .5rem;
+    }
+    .problem-card p { font-size: .9rem; color: rgba(255,255,255,.45); }
+
+    /* ── Features section ─────────────────────────────────────────────── */
+    #features { background: var(--paper); }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 2rem;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0,0,0,.07);
+    }
+    .feature-card.featured {
+      background: var(--ink); border-color: var(--ink);
+    }
+    .feature-card.featured h3 { color: #fff; }
+    .feature-card.featured p  { color: rgba(255,255,255,.5); }
+
+    .feature-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.25rem; font-size: 1.4rem;
+    }
+
+    /* H3 inside feature cards */
+    .feature-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--ink); margin-bottom: .5rem;
+    }
+    .feature-card p { font-size: .9rem; color: var(--ink-3); line-height: 1.6; }
+
+    /* ── How it works ─────────────────────────────────────────────────── */
+    #how { background: var(--paper-2); }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem; position: relative;
+    }
+
+    .step { text-align: center; }
+    .step-num {
+      width: 52px; height: 52px;
+      background: var(--accent); color: #fff;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-size: 1.2rem; font-weight: 800;
+      margin: 0 auto 1.25rem;
+    }
+    /* H3 for steps */
+    .step h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem; font-weight: 700;
+      color: var(--ink); margin-bottom: .5rem;
+    }
+    .step p { font-size: .9rem; color: var(--ink-3); }
+
+    /* ── Modules section ──────────────────────────────────────────────── */
+    #modules { background: var(--paper); }
+
+    .modules-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .module-item {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--paper-2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      font-size: .9rem; font-weight: 500; color: var(--ink);
+    }
+    .module-item .ti { color: var(--accent); font-size: 1.1rem; }
+
+    /* ── Testimonial / CTA strip ──────────────────────────────────────── */
+    #social-proof {
+      background: linear-gradient(135deg, var(--accent), var(--accent-d));
+      padding: 80px 5vw; text-align: center;
+    }
+    #social-proof h2 { color: #fff; }
+
+    /* H4 — testimonial quote */
+    #social-proof h4 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-family: 'Syne', sans-serif;
+      font-weight: 700; color: #fff;
+      max-width: 700px; margin: 0 auto 1.5rem;
+      opacity: .95;
+    }
+    #social-proof p { color: rgba(255,255,255,.7); font-size: .95rem; margin-bottom: 2rem; }
+
+    /* ── Contact / Form section ───────────────────────────────────────── */
+    #contact { background: var(--paper-2); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: start;
+    }
+
+    /* H5 — form section label */
+    .contact-info h5 {
+      font-family: 'Syne', sans-serif;
+      font-size: .85rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .1em;
+      color: var(--ink-4); margin-bottom: .5rem;
+    }
+
+    .contact-detail {
+      display: flex; align-items: center; gap: 12px;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: .95rem; color: var(--ink-2);
+      text-decoration: none;
+    }
+    .contact-detail .ti { color: var(--accent); font-size: 1.1rem; }
+
+    .form-card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 2.5rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,.06);
+    }
+
+    /* H2 inside form card */
+    .form-card h2 {
+      font-size: 1.5rem; margin-bottom: .5rem;
+    }
+    .form-card .subtitle {
+      font-size: .9rem; color: var(--ink-3); margin-bottom: 2rem;
+    }
+
+    .form-group { margin-bottom: 1.25rem; }
+
+    /* H6 — form labels */
+    .form-group h6 {
+      display: block;
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .08em;
+      color: var(--ink-3); margin-bottom: .4rem;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: .75rem 1rem;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-size: .95rem; font-family: 'DM Sans', sans-serif;
+      color: var(--ink); background: var(--paper);
+      outline: none;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(255,79,26,.1);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    .form-submit {
+      width: 100%;
+      padding: .9rem;
+      background: var(--accent); color: #fff;
+      border: none; border-radius: 12px;
+      font-size: 15px; font-weight: 600;
+      font-family: 'DM Sans', sans-serif;
+      cursor: pointer;
+      transition: background .15s, transform .15s;
+      margin-top: .5rem;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .form-submit:hover {
+      background: var(--accent-d);
+      transform: translateY(-1px);
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+    }
+    .form-success.visible { display: block; }
+    .form-success .check {
+      width: 64px; height: 64px;
+      background: #e6faf5; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 1.8rem; color: var(--success);
+    }
+
+    /* ── Footer ───────────────────────────────────────────────────────── */
+    footer {
+      background: var(--ink);
+      padding: 60px 5vw 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem; margin-bottom: 3rem;
+    }
+
+    .footer-brand p {
+      font-size: .9rem; color: rgba(255,255,255,.4);
+      margin-top: .75rem; max-width: 240px; line-height: 1.7;
+    }
+
+    .footer-col h6 {
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .1em;
+      color: rgba(255,255,255,.3); margin-bottom: 1rem;
+    }
+    .footer-col a {
+      display: block; font-size: .9rem;
+      color: rgba(255,255,255,.5);
+      text-decoration: none; margin-bottom: .6rem;
+      transition: color .15s;
+    }
+    .footer-col a:hover { color: #fff; }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 1.5rem;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 1rem;
+      font-size: .85rem; color: rgba(255,255,255,.3);
+    }
+
+    /* ── Floating WhatsApp button ─────────────────────────────────────── */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      z-index: 999;
+      width: 58px; height: 58px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 24px rgba(37,211,102,.45);
+      text-decoration: none;
+      transition: transform .2s, box-shadow .2s;
+      animation: waFloat 3s ease-in-out infinite;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 32px rgba(37,211,102,.55);
+      animation: none;
+    }
+    .whatsapp-float svg {
+      width: 32px; height: 32px; fill: #fff;
+    }
+    .whatsapp-tooltip {
+      position: absolute;
+      right: 70px; top: 50%; transform: translateY(-50%);
+      background: var(--ink); color: #fff;
+      font-size: 12px; font-weight: 600;
+      padding: .4rem .9rem; border-radius: 8px;
+      white-space: nowrap; pointer-events: none;
+      opacity: 0; transition: opacity .2s;
+    }
+    .whatsapp-tooltip::after {
+      content: '';
+      position: absolute; right: -6px; top: 50%; transform: translateY(-50%);
+      border: 6px solid transparent;
+      border-right: none; border-left-color: var(--ink);
+    }
+    .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; }
+
+    @keyframes waFloat {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-6px); }
+    }
+
+    /* Pulse ring */
+    .whatsapp-float::before {
+      content: '';
+      position: absolute; inset: -4px;
+      border-radius: 50%;
+      border: 2px solid rgba(37,211,102,.4);
+      animation: waPulse 2s ease-out infinite;
+    }
+    @keyframes waPulse {
+      0%   { transform: scale(1); opacity: .8; }
+      100% { transform: scale(1.4); opacity: 0; }
+    }
+
+    /* ── Utilities ────────────────────────────────────────────────────── */
+    .center { text-align: center; }
+    .center .section-sub { margin-left: auto; margin-right: auto; }
+
+    .divider {
+      border: none; border-top: 1px solid var(--border);
+      margin: 0;
+    }
+
+    /* ── Responsive ───────────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .contact-grid    { grid-template-columns: 1fr; gap: 3rem; }
+      .footer-grid     { grid-template-columns: 1fr 1fr; }
+      .nav-links       { display: none; }
+      .nav-mobile-cta  { display: flex; align-items: center; }
+    }
+
+    @media (max-width: 600px) {
+      section          { padding: 64px 5vw; }
+      .hero            { padding: 120px 5vw 80px; }
+      .footer-grid     { grid-template-columns: 1fr; }
+      .form-row        { grid-template-columns: 1fr; }
+      .hero-stats      { gap: 1.5rem; }
+      .stat-div        { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .whatsapp-float { animation: none; }
+      .whatsapp-float::before { animation: none; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────────────────── -->
+  <nav aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="PrintOS Home">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v3H3V5zm2 4h14v2H5V9zm-2 3h18v8H3v-8zm2 2v4h14v-4H5z"/></svg>
+      </div>
+      <span class="nav-logo-text">PrintOS</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#modules">Modules</a>
+      <a href="#contact">Contact</a>
+      <a href="/login" class="nav-cta">Get started →</a>
+    </div>
+
+    <div class="nav-mobile-cta">
+      <a href="/login" class="nav-cta">Get started</a>
+    </div>
+  </nav>
+
+  <!-- ── Hero ────────────────────────────────────────────────────────── -->
+  <main>
+  <section class="hero" aria-labelledby="hero-heading">
+
+    <div class="hero-eyebrow" aria-label="Product category">
+      <i class="ti ti-printer" aria-hidden="true"></i>
+      Print Shop Management Software
+    </div>
+
+    <!-- H1 — The only H1 on the page -->
+    <h1 id="hero-heading">
+      Run your entire<br />
+      printing business<br />
+      <span class="accent">in one dashboard</span>
+    </h1>
+
+    <p class="hero-sub">
+      PrintOS connects every part of your print shop — orders, production, payroll, inventory, customers and AI insights — into a single system built for the real world.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">
+        <i class="ti ti-calendar" aria-hidden="true"></i>
+        Request a demo
+      </a>
+      <a href="#features" class="btn-secondary">
+        <i class="ti ti-arrow-down" aria-hidden="true"></i>
+        See all features
+      </a>
+    </div>
+
+    <div class="hero-stats" aria-label="Product statistics">
+      <div class="hero-stat">
+        <div class="hero-stat-num">12+</div>
+        <div class="hero-stat-label">Modules</div>
+      </div>
+      <div class="stat-div" aria-hidden="true"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">6</div>
+        <div class="hero-stat-label">User roles</div>
+      </div>
+      <div class="stat-div" aria-hidden="true"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">AI</div>
+        <div class="hero-stat-label">Powered</div>
+      </div>
+      <div class="stat-div" aria-hidden="true"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">₨</div>
+        <div class="hero-stat-label">PKR native</div>
+      </div>
+      <div class="stat-div" aria-hidden="true"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">WA</div>
+        <div class="hero-stat-label">WhatsApp ready</div>
+      </div>
+    </div>
+
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── Problems ────────────────────────────────────────────────────── -->
+  <section id="problem" aria-labelledby="problem-heading">
+    <div class="center" style="margin-bottom:3.5rem">
+      <p class="section-eyebrow">Sound familiar?</p>
+      <!-- H2 -->
+      <h2 id="problem-heading">Print shops run on chaos.<br />PrintOS fixes that.</h2>
+      <p class="section-sub center">
+        Every print business faces the same five problems. Most just accept them. You don't have to.
+      </p>
+    </div>
+
+    <div class="problems-grid">
+      <article class="problem-card">
+        <i class="ti ti-messages" aria-hidden="true"></i>
+        <!-- H3 -->
+        <h3>Orders on WhatsApp</h3>
+        <p>Jobs fall through the cracks when everything is tracked in message threads and paper notebooks.</p>
+      </article>
+      <article class="problem-card">
+        <i class="ti ti-phone-call" aria-hidden="true"></i>
+        <h3>Customers calling for updates</h3>
+        <p>"Kaisa chal raha hai order?" — the most expensive question a print shop gets asked all day.</p>
+      </article>
+      <article class="problem-card">
+        <i class="ti ti-calculator-off" aria-hidden="true"></i>
+        <h3>Pricing by guesswork</h3>
+        <p>No standard rate cards. No cost calculations. Profits erode job by job without anyone noticing.</p>
+      </article>
+      <article class="problem-card">
+        <i class="ti ti-chart-off" aria-hidden="true"></i>
+        <h3>No idea if you're profitable</h3>
+        <p>Month-end surprises because nobody tracked ink, paper, machine time and overhead together.</p>
+      </article>
+      <article class="problem-card">
+        <i class="ti ti-users-group" aria-hidden="true"></i>
+        <h3>HR done manually</h3>
+        <p>Payroll calculated on spreadsheets, attendance marked in registers, overtime forgotten.</p>
+      </article>
+      <article class="problem-card">
+        <i class="ti ti-activity-heartbeat" aria-hidden="true"></i>
+        <h3>Machines break, nobody planned</h3>
+        <p>No maintenance schedule. No downtime tracking. A broken press on a rush job day is a crisis.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ── Features ────────────────────────────────────────────────────── -->
+  <section id="features" aria-labelledby="features-heading">
+    <div class="center" style="margin-bottom:3.5rem">
+      <p class="section-eyebrow">What PrintOS does</p>
+      <!-- H2 -->
+      <h2 id="features-heading">Every tool your press needs.<br />Nothing it doesn't.</h2>
+      <p class="section-sub center">
+        Built specifically for printing businesses — not a generic ERP bolted onto your workflow.
+      </p>
+    </div>
+
+    <div class="features-grid">
+
+      <article class="feature-card featured">
+        <div class="feature-icon" style="background:rgba(255,79,26,.2)">
+          <i class="ti ti-brain" style="color:var(--accent)" aria-hidden="true"></i>
+        </div>
+        <!-- H3 -->
+        <h3>AI Business Analyst</h3>
+        <p>Ask anything — "What is my revenue this month?" "Which orders are overdue?" — and get instant answers from your own live data. Powered by Claude.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" style="background:rgba(37,99,235,.1)">
+          <i class="ti ti-file-invoice" style="color:#2563eb" aria-hidden="true"></i>
+        </div>
+        <h3>Smart Quotation Engine</h3>
+        <p>Generate a quotation in 30 seconds. Send via WhatsApp. Customer approves with one click from their phone — no login required.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" style="background:rgba(124,58,237,.1)">
+          <i class="ti ti-layout-kanban" style="color:#7c3aed" aria-hidden="true"></i>
+        </div>
+        <h3>Live Production Kanban</h3>
+        <p>See every job, every machine, every operator in real time. Move jobs from Queued → Design → Press → Finishing with one click.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" style="background:rgba(0,200,150,.1)">
+          <i class="ti ti-calculator" style="color:var(--success)" aria-hidden="true"></i>
+        </div>
+        <h3>Print Costing Calculator</h3>
+        <p>Paper calc, job cost-plus, imposition, rate cards. Calculate paper weight, ink coverage, machine time and exact profit margin per job.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" style="background:rgba(255,166,0,.1)">
+          <i class="ti ti-globe" style="color:var(--warning,#f5a623)" aria-hidden="true"></i>
+        </div>
+        <h3>Customer Portal</h3>
+        <p>Customers track their own orders by QR code. Log in to see all orders, quotations and invoices. Request new jobs directly.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" style="background:rgba(37,211,102,.1)">
+          <i class="ti ti-brand-whatsapp" style="color:#25d366" aria-hidden="true"></i>
+        </div>
+        <h3>WhatsApp Integration</h3>
+        <p>Send quotations, dispatch notifications and reorder messages to suppliers via WhatsApp — no API keys, no extra cost.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ── How it works ─────────────────────────────────────────────────── -->
+  <section id="how" aria-labelledby="how-heading">
+    <div class="center" style="margin-bottom:3.5rem">
+      <p class="section-eyebrow">The workflow</p>
+      <!-- H2 -->
+      <h2 id="how-heading">From inquiry to dispatch.<br />Every step tracked.</h2>
+    </div>
+
+    <div class="steps" role="list">
+      <div class="step" role="listitem">
+        <div class="step-num" aria-hidden="true">1</div>
+        <!-- H3 -->
+        <h3>Customer inquiry</h3>
+        <p>Customer contacts you. Create a quotation in 30 seconds. Send via WhatsApp with a one-click approval link.</p>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-num" aria-hidden="true">2</div>
+        <h3>Quote approved</h3>
+        <p>Customer taps Approve on their phone. Order is created automatically. You get an instant notification.</p>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-num" aria-hidden="true">3</div>
+        <h3>Production starts</h3>
+        <p>Jobs appear on the Kanban board. Assign machines and staff. Track progress from design to press to finishing.</p>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-num" aria-hidden="true">4</div>
+        <h3>Invoice & dispatch</h3>
+        <p>When all jobs are done, invoice is auto-generated. Mark as dispatched. Customer sees the update on their portal.</p>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-num" aria-hidden="true">5</div>
+        <h3>Business intelligence</h3>
+        <p>AI analyses everything — revenue trends, customer risk, workload forecast, low stock alerts. Always one step ahead.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── All Modules ──────────────────────────────────────────────────── -->
+  <section id="modules" aria-labelledby="modules-heading">
+    <div style="margin-bottom:3rem">
+      <p class="section-eyebrow">Complete system</p>
+      <!-- H2 -->
+      <h2 id="modules-heading">Every module your<br />print shop needs</h2>
+    </div>
+
+    <div class="modules-list" role="list">
+      <div class="module-item" role="listitem"><i class="ti ti-dashboard" aria-hidden="true"></i>Live Dashboard</div>
+      <div class="module-item" role="listitem"><i class="ti ti-address-book" aria-hidden="true"></i>Customer Management</div>
+      <div class="module-item" role="listitem"><i class="ti ti-boxes" aria-hidden="true"></i>Inventory</div>
+      <div class="module-item" role="listitem"><i class="ti ti-tool" aria-hidden="true"></i>Machine Management</div>
+      <div class="module-item" role="listitem"><i class="ti ti-file-description" aria-hidden="true"></i>Quotations</div>
+      <div class="module-item" role="listitem"><i class="ti ti-receipt-2" aria-hidden="true"></i>Expenses</div>
+      <div class="module-item" role="listitem"><i class="ti ti-wallet" aria-hidden="true"></i>Invoices</div>
+      <div class="module-item" role="listitem"><i class="ti ti-report-money" aria-hidden="true"></i>Payroll</div>
+      <div class="module-item" role="listitem"><i class="ti ti-chart-pie" aria-hidden="true"></i>Financial Reports</div>
+      <div class="module-item" role="listitem"><i class="ti ti-users" aria-hidden="true"></i>Staff Management</div>
+      <div class="module-item" role="listitem"><i class="ti ti-calendar-check" aria-hidden="true"></i>Attendance</div>
+      <div class="module-item" role="listitem"><i class="ti ti-globe" aria-hidden="true"></i>Customer Portal</div>
+      <div class="module-item" role="listitem"><i class="ti ti-bell" aria-hidden="true"></i>Notifications</div>
+      <div class="module-item" role="listitem"><i class="ti ti-shield-lock" aria-hidden="true"></i>User Permissions</div>
+      <div class="module-item" role="listitem"><i class="ti ti-database-export" aria-hidden="true"></i>Database Backup</div>
+      <div class="module-item" role="listitem"><i class="ti ti-building" aria-hidden="true"></i>Multi-Branch</div>
+    </div>
+  </section>
+
+  <!-- ── Social proof / CTA strip ────────────────────────────────────── -->
+  <section id="social-proof" aria-label="Call to action">
+    <!-- H4 — pull quote -->
+    <h4>"The first software that actually understands how a printing press works."</h4>
+    <p>Used by offset, digital, UV, screen and packaging businesses globally.</p>
+    <a href="#contact" class="btn-primary" style="display:inline-flex;margin:0 auto">
+      <i class="ti ti-calendar" aria-hidden="true"></i>
+      Book a free demo
+    </a>
+  </section>
+
+  <!-- ── Contact & Form ───────────────────────────────────────────────── -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <p class="section-eyebrow">Get in touch</p>
+        <!-- H2 -->
+        <h2 id="contact-heading">See PrintOS in<br />your press today</h2>
+        <p class="section-sub" style="margin-bottom:2.5rem">
+          Book a free demo and we'll walk you through every module, customised to your print shop's workflow.
+        </p>
+
+        <!-- H5 — contact detail labels -->
+        <h5>WhatsApp</h5>
+        <a href="https://api.whatsapp.com/send?phone=+923001234567&text=Hi%20PrintOS%2C%20I%20want%20a%20demo" class="contact-detail" target="_blank" rel="noopener noreferrer">
+          <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
+          +92 300 123 4567
+        </a>
+
+        <h5 style="margin-top:1.5rem">Email</h5>
+        <a href="mailto:hello@printos.app" class="contact-detail">
+          <i class="ti ti-mail" aria-hidden="true"></i>
+          hello@printos.app
+        </a>
+
+        <h5 style="margin-top:1.5rem">Available for</h5>
+        <div class="contact-detail" style="cursor:default">
+          <i class="ti ti-globe" aria-hidden="true"></i>
+          Offset · Digital · UV · Screen · Packaging
+        </div>
+      </div>
+
+      <div class="form-card" role="region" aria-label="Demo request form">
+        <div id="form-content">
+          <!-- H2 inside form -->
+          <h2>Request a demo</h2>
+          <p class="subtitle">We'll reach out within 24 hours.</p>
+
+          <form id="demo-form" novalidate aria-label="Demo request">
+
+            <div class="form-row">
+              <div class="form-group">
+                <!-- H6 — form field label -->
+                <h6><label for="fname">First name</label></h6>
+                <input type="text" id="fname" name="fname" placeholder="Ahmad" required autocomplete="given-name" />
+              </div>
+              <div class="form-group">
+                <h6><label for="lname">Last name</label></h6>
+                <input type="text" id="lname" name="lname" placeholder="Khan" required autocomplete="family-name" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <h6><label for="email">Business email</label></h6>
+              <input type="email" id="email" name="email" placeholder="you@printshop.com" required autocomplete="email" />
+            </div>
+
+            <div class="form-group">
+              <h6><label for="phone">WhatsApp / Phone</label></h6>
+              <input type="tel" id="phone" name="phone" placeholder="+92 300 000 0000" autocomplete="tel" />
+            </div>
+
+            <div class="form-group">
+              <h6><label for="press-type">Press type</label></h6>
+              <select id="press-type" name="press_type">
+                <option value="">Select your press type…</option>
+                <option value="offset">Offset printing</option>
+                <option value="digital">Digital printing</option>
+                <option value="uv">UV printing</option>
+                <option value="screen">Screen printing</option>
+                <option value="packaging">Packaging / Flexo</option>
+                <option value="mixed">Mixed / Multiple types</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <h6><label for="message">Anything specific you want to see?</label></h6>
+              <textarea id="message" name="message" placeholder="e.g. job costing calculator, WhatsApp integration, customer portal…"></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">
+              <i class="ti ti-send" aria-hidden="true"></i>
+              Send request
+            </button>
+
+          </form>
+        </div>
+
+        <div class="form-success" id="form-success" role="alert" aria-live="polite">
+          <div class="check"><i class="ti ti-circle-check" aria-hidden="true"></i></div>
+          <h2 style="font-size:1.4rem;margin-bottom:.5rem">Request sent!</h2>
+          <p style="color:var(--ink-3)">We'll reach out on WhatsApp or email within 24 hours to schedule your demo.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────────────────── -->
+  <footer role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" aria-label="PrintOS Home" style="margin-bottom:.75rem;display:inline-flex">
+          <div class="nav-logo-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v3H3V5zm2 4h14v2H5V9zm-2 3h18v8H3v-8zm2 2v4h14v-4H5z"/></svg>
+          </div>
+          <span class="nav-logo-text" style="color:#fff">PrintOS</span>
+        </a>
+        <p>The complete management system for professional printing businesses. Built for the real world.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Product links">
+        <h6>Product</h6>
+        <a href="#features">Features</a>
+        <a href="#modules">All modules</a>
+        <a href="#how">How it works</a>
+        <a href="/login">Login</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Industry links">
+        <h6>Industry</h6>
+        <a href="#">Offset printing</a>
+        <a href="#">Digital printing</a>
+        <a href="#">UV printing</a>
+        <a href="#">Screen printing</a>
+        <a href="#">Packaging</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Company links">
+        <h6>Company</h6>
+        <a href="#contact">Request demo</a>
+        <a href="mailto:hello@printos.app">Contact</a>
+        <a href="https://api.whatsapp.com/send?phone=+923001234567" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 PrintOS. All rights reserved.</span>
+      <span>Built for offset · digital · UV · screen · packaging</span>
+    </div>
+  </footer>
+
+  <!-- ── Floating WhatsApp Button ─────────────────────────────────────── -->
+  <a
+    href="https://api.whatsapp.com/send?phone=+923001234567&text=Hi%20PrintOS%2C%20I%20want%20to%20know%20more%20about%20the%20software"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with us on WhatsApp"
+  >
+    <span class="whatsapp-tooltip" aria-hidden="true">Chat with us</span>
+    <!-- Official WhatsApp SVG icon -->
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.570-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- ── Scripts ──────────────────────────────────────────────────────── -->
+  <script>
+    // Form submit handler
+    document.getElementById('demo-form').addEventListener('submit', function(e) {
+      e.preventDefault()
+      const form    = document.getElementById('form-content')
+      const success = document.getElementById('form-success')
+      form.style.display    = 'none'
+      success.style.display = 'block'
+      success.classList.add('visible')
+      // In production: replace this with your actual form API endpoint
+    })
+
+    // Smooth reveal on scroll
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.style.opacity = '1'
+            e.target.style.transform = 'translateY(0)'
+          }
+        })
+      }, { threshold: 0.1 })
+
+      document.querySelectorAll('.feature-card, .problem-card, .step, .module-item').forEach(el => {
+        el.style.opacity    = '0'
+        el.style.transform  = 'translateY(20px)'
+        el.style.transition = 'opacity .5s ease, transform .5s ease'
+        observer.observe(el)
+      })
+    }
+
+    // Active nav link highlight
+    const sections = document.querySelectorAll('section[id]')
+    const navLinks  = document.querySelectorAll('.nav-links a')
+    window.addEventListener('scroll', () => {
+      let current = ''
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 100) current = s.id
+      })
+      navLinks.forEach(a => {
+        a.style.color = a.getAttribute('href') === '#'+current ? 'var(--ink)' : ''
+      })
+    }, { passive: true })
+  </script>
+
+</body>
+</html>
